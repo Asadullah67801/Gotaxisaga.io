@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoTaxi</title>
+</head>
+<body>
+    
+
+
+    <header>
+        <nav>
+            <a href="#"><img src=" https://tse2.mm.bing.net/th?id=OIP.fxqou3DksbIeeTRDKyp67AHaEL&pid=Api&P=0&h=220" class="logo"></a>
+            <div class="navlinks">
+                <ul>
+                    <li>Home</li>
+                    <li>Contact us</li>
+                    <li>Jobs</li>
+
+                </ul>
+        </nav>
+    </header>
+
+    <!---image slider--->
+    <section class="hero">
+
+<div class="slider">
+  <div class="overlay"></div>
+    <img src="https://tse1.mm.bing.net/th?id=OIP.vG2XLs0w2u2mKDXFcWnlRwHaEK&pid=Api&P=0&h=220" alt="1">
+  
+  <h1>New journey begins</h1>
+  <h2> Book a ride and Enjoy a Trip</h2>
+    <img src="https://tse1.mm.bing.net/th?id=OIP.K_Kpl7Qvcz7tM-qzD7nl7gHaD6&pid=Api&rs=1&c=1&qlt=95&w=214&h=112" alt="2">
+    <img src="https://tse4.mm.bing.net/th?id=OIP.eiPtH3vLV6cnKNMHBRTSdQHaDt&pid=Api&P=0&h=220" alt="3">
+</div>
+
+    </section>
+
+    <setion class="flex-container">
+
+        <div class="centre-text">
+            <h2></h2>
+        </div>
+    </setion>
+
+
+    <!--javascript-->
+    <script>
+
+    const slider = document.querySelector('.slider');
+    const images = document.querySelectorAll('.slider img');
+
+    let currentSlide = 0;
+
+    function showSlide(index) {
+        images[currentSlide].classList.remove('active');
+        currentSlide = (index + images.length) % images.length;
+        images[currentSlide].classList.add('active');
+    }
+
+    function nextSlide() {
+        showSlide(currentSlide + 1);
+    }
+
+    setInterval(nextSlide, 4000); // Change slide every 3 seconds
+</script>
+</body>
+
+</html>
